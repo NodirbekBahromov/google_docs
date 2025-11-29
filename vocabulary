@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Flashcards</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+        @media print {
+            body { -webkit-print-color-adjust: exact; }
+            .page-break { page-break-after: always; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+        }
+        .sheet {
+            background: white;
+            width: 210mm;
+            height: 297mm;
+            display: block;
+            margin: 0 auto;
+            padding: 1cm;
+            box-sizing: border-box;
+            position: relative;
+        }
+        table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        td {
+            border: 1px dashed #999; /* Dashed lines for cutting guides */
+            text-align: center;
+            vertical-align: middle;
+            width: 33.33%;
+            height: 20%; /* 5 rows = 20% each */
+            padding: 10px;
+        }
+        
+        /* Front Side Styles */
+        .front-word {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Back Side Styles */
+        .back-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .icon {
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+        .ru-word {
+            font-size: 16px;
+            color: #0056b3; /* Blue for Russian */
+            font-weight: bold;
+        }
+        .uz-word {
+            font-size: 16px;
+            color: #007a33; /* Green for Uzbek */
+            font-style: italic;
+        }
+
+        /* Hide screen background in print */
+        @media print {
+            body { background: white; }
+            .sheet { margin: 0; box-shadow: none; width: 100%; height: 100vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: FRONT (English 1-15) -->
+    <div class="sheet">
+        <table>
+            <tr>
+                <td><div class="front-word">Remote control</div></td>
+                <td><div class="front-word">Battery</div></td>
+                <td><div class="front-word">Circuit</div></td>
+            </tr>
+            <tr>
+                <td><div class="front-word">Button</div></td>
+                <td><div class="front-word">Switch</div></td>
+                <td><div class="front-word">Connector</div></td>
+            </tr>
+            <tr>
+                <td><div class="front-word">Wire</div></td>
+                <td><div class="front-word">Print</div></td>
+                <td><div class="front-word">Rotate</div></td>
+            </tr>
+            <tr>
+                <td><div class="front-word">Search</div></td>
+                <td><div class="front-word">Voice assistant</div></td>
+                <td><div class="front-word">Artificial Intelligence</div></td>
+            </tr>
+            <tr>
+                <td><div class="front-word">Light bulb</div></td>
+                <td><div class="front-word">Notebook</div></td>
+                <td><div class="front-word">Laptop</div></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="page-break"></div>
+
+    <!-- PAGE 2: BACK (Translations 1-15) -->
+    <!-- Note: Columns are reversed (3-2-1) to align with front side when printed double-sided -->
+    <div class="sheet">
+        <table>
+            <tr>
+                <!-- Circuit -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🔌</div>
+                        <div class="ru-word">Электрическая цепь</div>
+                        <div class="uz-word">Elektr zanjiri</div>
+                    </div>
+                </td>
+                <!-- Battery -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🔋</div>
+                        <div class="ru-word">Батарейка</div>
+                        <div class="uz-word">Batareya</div>
+                    </div>
+                </td>
+                <!-- Remote control -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">📱</div>
+                        <div class="ru-word">Пульт</div>
+                        <div class="uz-word">Masofadan boshqarish pulti</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- Connector -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🔗</div>
+                        <div class="ru-word">Разъем</div>
+                        <div class="uz-word">Ulagich</div>
+                    </div>
+                </td>
+                <!-- Switch -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🔛</div>
+                        <div class="ru-word">Переключатель</div>
+                        <div class="uz-word">O'chirib-yoqish tugmasi</div>
+                    </div>
+                </td>
+                <!-- Button -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🔴</div>
+                        <div class="ru-word">Кнопка</div>
+                        <div class="uz-word">Tugma</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- Rotate -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🔄</div>
+                        <div class="ru-word">Вращать</div>
+                        <div class="uz-word">Aylantirmoq</div>
+                    </div>
+                </td>
+                <!-- Print -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🖨️</div>
+                        <div class="ru-word">Печатать</div>
+                        <div class="uz-word">Chop etish</div>
+                    </div>
+                </td>
+                <!-- Wire -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">〰️</div>
+                        <div class="ru-word">Провод</div>
+                        <div class="uz-word">Sim</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- AI -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🤖</div>
+                        <div class="ru-word">Искусственный интеллект</div>
+                        <div class="uz-word">Sun'iy intellekt</div>
+                    </div>
+                </td>
+                <!-- Voice Assistant -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🗣️</div>
+                        <div class="ru-word">Голосовой помощник</div>
+                        <div class="uz-word">Ovozli yordamchi</div>
+                    </div>
+                </td>
+                <!-- Search -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🔍</div>
+                        <div class="ru-word">Искать</div>
+                        <div class="uz-word">Qidirmoq</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- Laptop -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">💻</div>
+                        <div class="ru-word">Ноутбук</div>
+                        <div class="uz-word">Noutbuk</div>
+                    </div>
+                </td>
+                <!-- Notebook -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">📓</div>
+                        <div class="ru-word">Блокнот</div>
+                        <div class="uz-word">Daftar</div>
+                    </div>
+                </td>
+                <!-- Light bulb -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">💡</div>
+                        <div class="ru-word">Лампочка</div>
+                        <div class="uz-word">Lampochka</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PAGE 3: FRONT (English 16-30) -->
+    <div class="sheet">
+        <table>
+            <tr>
+                <td><div class="front-word">Play</div></td>
+                <td><div class="front-word">Move</div></td>
+                <td><div class="front-word">Jump</div></td>
+            </tr>
+            <tr>
+                <td><div class="front-word">Hit</div></td>
+                <td><div class="front-word">Sound</div></td>
+                <td><div class="front-word">Ground</div></td>
+            </tr>
+            <tr>
+                <td><div class="front-word">Trolley</div></td>
+                <td><div class="front-word">Boat</div></td>
+                <td><div class="front-word">Spawn</div></td>
+            </tr>
+            <tr>
+                <td><div class="front-word">Sensor</div></td>
+                <td><div class="front-word">Tool</div></td>
+                <td><div class="front-word">Lift</div></td>
+            </tr>
+            <tr>
+                <td><div class="front-word">Take</div></td>
+                <td><div class="front-word">Bring</div></td>
+                <td><div class="front-word">Build</div></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PAGE 4: BACK (Translations 16-30) -->
+    <!-- Mirrored Layout -->
+    <div class="sheet">
+        <table>
+            <tr>
+                <!-- Jump -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🦘</div>
+                        <div class="ru-word">Прыгать</div>
+                        <div class="uz-word">Sakramoq</div>
+                    </div>
+                </td>
+                <!-- Move -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🏃</div>
+                        <div class="ru-word">Двигаться</div>
+                        <div class="uz-word">Harakatlanmoq</div>
+                    </div>
+                </td>
+                <!-- Play -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">▶️</div>
+                        <div class="ru-word">Играть</div>
+                        <div class="uz-word">O'ynamoq</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- Ground -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🏜️</div>
+                        <div class="ru-word">Земля / Поверхность</div>
+                        <div class="uz-word">Yer</div>
+                    </div>
+                </td>
+                <!-- Sound -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🔊</div>
+                        <div class="ru-word">Звук</div>
+                        <div class="uz-word">Tovush</div>
+                    </div>
+                </td>
+                <!-- Hit -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🥊</div>
+                        <div class="ru-word">Ударять</div>
+                        <div class="uz-word">Urmoq</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- Spawn -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">👻</div>
+                        <div class="ru-word">Появляться</div>
+                        <div class="uz-word">Paydo bo'lmoq</div>
+                    </div>
+                </td>
+                <!-- Boat -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🛥️</div>
+                        <div class="ru-word">Лодка</div>
+                        <div class="uz-word">Qayiq</div>
+                    </div>
+                </td>
+                <!-- Trolley -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🛒</div>
+                        <div class="ru-word">Тележка</div>
+                        <div class="uz-word">Aravacha</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- Lift -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🏋️</div>
+                        <div class="ru-word">Поднимать</div>
+                        <div class="uz-word">Ko'tarmoq</div>
+                    </div>
+                </td>
+                <!-- Tool -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🛠️</div>
+                        <div class="ru-word">Инструмент</div>
+                        <div class="uz-word">Asbob</div>
+                    </div>
+                </td>
+                <!-- Sensor -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">📡</div>
+                        <div class="ru-word">Датчик</div>
+                        <div class="uz-word">Sensor</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- Build -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🧱</div>
+                        <div class="ru-word">Строить</div>
+                        <div class="uz-word">Qurmoq</div>
+                    </div>
+                </td>
+                <!-- Bring -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🎁</div>
+                        <div class="ru-word">Приносить</div>
+                        <div class="uz-word">Olib kelmoq</div>
+                    </div>
+                </td>
+                <!-- Take -->
+                <td>
+                    <div class="back-container">
+                        <div class="icon">🤲</div>
+                        <div class="ru-word">Брать</div>
+                        <div class="uz-word">Olmoq</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
